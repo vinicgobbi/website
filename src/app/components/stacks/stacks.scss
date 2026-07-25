@@ -2,6 +2,11 @@
   transition: transform 0.2s ease-in-out;
 }
 
+/* O devicon-angular-plain.colored vem branco (#fff) no pacote, pensado só pra fundo escuro. */
+#profile-stacks-list i.devicon-angular-plain.colored {
+  color: #dd0031;
+}
+
 #profile-stacks-list i:hover {
   transform: scale(1.15);
 }

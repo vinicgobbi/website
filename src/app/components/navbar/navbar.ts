@@ -1,6 +1,7 @@
 
-import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy, inject } from '@angular/core';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+import { ThemeService } from '../../services/theme-service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,10 +11,12 @@ import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './navbar.scss'
 })
 export class Navbar {
+  protected readonly themeService = inject(ThemeService);
+
   isCollapsed = true;
   activeSection: string = 'header';
 
-  sectionIds: string[] = ['header', 'about', 'experience', 'certifications', 'stacks', 'projects', 'contact'];
+  sectionIds: string[] = ['header', 'about', 'stacks', 'experience', 'projects', 'certifications', 'contact'];
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {

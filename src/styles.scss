@@ -1,11 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
-/* Importing Bootstrap SCSS file. */
-@use 'bootstrap/scss/bootstrap';
+/* Fontes self-hosted (sem chamada externa ao Google Fonts) */
+@use '@fontsource/inter/400.css' as *;
+@use '@fontsource/inter/500.css' as *;
+@use '@fontsource/inter/600.css' as *;
+@use '@fontsource/manrope/600.css' as *;
+@use '@fontsource/manrope/700.css' as *;
+@use '@fontsource/manrope/800.css' as *;
+
+/* Importing Bootstrap SCSS file, com tokens de marca do portfólio. */
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: #14B8A6,
+  $font-family-sans-serif: ('Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif),
+  $headings-font-family: ('Manrope', var(--bs-font-sans-serif)),
+  $headings-font-weight: 700,
+
+  $body-bg: #F8FAFC,
+  $body-color: #0F172A,
+  $body-tertiary-bg: #F1F5F9,
+  $border-color: rgba(15, 23, 42, .08),
+  $border-color-translucent: rgba(15, 23, 42, .08),
+
+  $body-bg-dark: #0B0F14,
+  $body-color-dark: #E2E8F0,
+  $body-tertiary-bg-dark: #1A212B,
+  $border-color-dark: rgba(255, 255, 255, .08),
+  $border-color-translucent-dark: rgba(255, 255, 255, .08),
+
+  $card-bg: var(--bs-tertiary-bg)
+);
 @use "bootstrap-icons/font/bootstrap-icons.css";
 @use 'devicon/devicon.min.css';
 
 :root {
   font-display: swap;
+}
+
+[data-bs-theme="dark"] {
+  --navbar-glass-bg: rgba(11, 15, 20, .7);
+  --navbar-glass-border: rgba(255, 255, 255, .2);
+  --accent-soft: rgba(20, 184, 166, .12);
+}
+
+[data-bs-theme="light"] {
+  --navbar-glass-bg: rgba(248, 250, 252, .7);
+  --navbar-glass-border: rgba(15, 23, 42, .12);
+  --accent-soft: rgba(13, 148, 136, .1);
+}
+
+.py-6 {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.py-7 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+/* Reveal-on-scroll sutil (ver RevealOnScroll directive) */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media print {

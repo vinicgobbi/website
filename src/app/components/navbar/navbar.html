@@ -9,7 +9,7 @@
     </button>
 
     <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-lg-end">
+      <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-lg-end align-items-lg-center">
         <li class="nav-item">
           <a class="nav-link" (click)="scrollTo('header')" [class.active]="activeSection === 'header'">Home</a>
         </li>
@@ -17,21 +17,28 @@
           <a class="nav-link" (click)="scrollTo('about')" [class.active]="activeSection === 'about'">Sobre</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('stacks')" [class.active]="activeSection === 'stacks'">Stacks</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" (click)="scrollTo('experience')"
             [class.active]="activeSection === 'experience'">Experiência</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollTo('projects')" [class.active]="activeSection === 'projects'">Projetos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="scrollTo('certifications')"
             [class.active]="activeSection === 'certifications'">Certificações e Cursos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollTo('stacks')" [class.active]="activeSection === 'stacks'">Stacks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="scrollTo('projects')" [class.active]="activeSection === 'projects'">Projetos</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" (click)="scrollTo('contact')" [class.active]="activeSection === 'contact'">Contato</a>
+        </li>
+        <li class="nav-item ms-lg-2">
+          <button type="button" class="btn btn-sm btn-outline-secondary theme-toggle" (click)="themeService.toggle()"
+            [attr.aria-label]="themeService.theme() === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'"
+            [title]="themeService.theme() === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'">
+            <i class="bi" [class.bi-sun]="themeService.theme() === 'dark'" [class.bi-moon-stars]="themeService.theme() === 'light'"></i>
+          </button>
         </li>
       </ul>
     </div>

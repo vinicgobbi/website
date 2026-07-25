@@ -1,16 +1,16 @@
 <section>
-  <div id="certifications" class="container my-5 py-5">
+  <div id="certifications" class="container my-5 py-6" appRevealOnScroll>
     <div class="text-center mb-5">
       <h2 class="fw-bold">Certificações e Cursos</h2>
-      <p class="text-muted">Minhas qualificações, aprendizados e especializações.</p>
+      <p class="text-body-secondary">Minhas qualificações, aprendizados e especializações.</p>
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       @for (cert of certs; track cert) {
       <div class="col">
-        <div class="card h-100 bg-dark text-white border-secondary">
+        <div class="card h-100">
           <!-- Preview da certificação com altura fixa para padronizar os cards -->
-          <img [src]="cert.preview" class="card-img-top border-bottom border-secondary" [alt]="cert.titulo"
+          <img [src]="cert.preview" class="card-img-top border-bottom" [alt]="cert.titulo"
             style="height: 220px; object-fit: cover;" />
 
           <div class="card-body d-flex flex-column">
@@ -41,7 +41,7 @@
                 <div class="text-truncate me-2" [title]="cert.codigo">
                   <i class="bi bi-upc-scan text-secondary me-2"></i>
                   <span class="text-muted small">Código:</span>
-                  <strong class="user-select-all ms-1 text-white">{{ cert.codigo }}</strong>
+                  <strong class="user-select-all ms-1 text-body-emphasis">{{ cert.codigo }}</strong>
                 </div>
 
                 <button class="btn btn-sm flex-shrink-0" [class.btn-outline-secondary]="codigoCopiado !== cert.codigo"
@@ -67,7 +67,7 @@
               </a>
               }
               @if (cert.url) {
-              <a [href]="cert.url" target="_blank" class="btn btn-outline-light flex-fill">
+              <a [href]="cert.url" target="_blank" class="btn btn-outline-secondary flex-fill">
                 <i class="bi bi-link-45deg"></i> Validar
               </a>
               }

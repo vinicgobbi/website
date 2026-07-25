@@ -1,10 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Cert } from '../../shared/interfaces/cert';
 import { CertsService } from '../../services/certs-service';
+import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
 
 @Component({
   selector: 'app-certs',
-  imports: [],
+  imports: [RevealOnScroll],
   templateUrl: './certs.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './certs.scss',
