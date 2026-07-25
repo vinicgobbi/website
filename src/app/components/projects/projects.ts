@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgbModal, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectsService } from '../../services/projects-service';
 import { Project } from '../../shared/interfaces/project';
@@ -8,6 +8,7 @@ import { Project } from '../../shared/interfaces/project';
   selector: 'app-projects',
   imports: [],
   templateUrl: './projects.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './projects.scss'
 })
 export class Projects {

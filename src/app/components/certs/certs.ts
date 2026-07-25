@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Cert } from '../../shared/interfaces/cert';
 import { CertsService } from '../../services/certs-service';
 
@@ -6,6 +6,7 @@ import { CertsService } from '../../services/certs-service';
   selector: 'app-certs',
   imports: [],
   templateUrl: './certs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './certs.scss',
 })
 export class Certs {

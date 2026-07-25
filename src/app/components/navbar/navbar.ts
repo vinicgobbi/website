@@ -1,11 +1,12 @@
 
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
   imports: [NgbCollapse],
   templateUrl: './navbar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './navbar.scss'
 })
 export class Navbar {
