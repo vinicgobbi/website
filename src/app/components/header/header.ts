@@ -8,14 +8,4 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./header.scss']
 })
-export class Header {
-  public imprimirCV(): void {
-    const oldTitle = document.title;
-    
-    document.title = 'cv-vinicius-cavati-gobbi';
-
-    window.print();
-
-    document.title = oldTitle;
-  }
-}
+export class Header { }
