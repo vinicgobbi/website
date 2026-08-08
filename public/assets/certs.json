@@ -12,6 +12,16 @@
 	},
 	{
 		"tipo": "curso",
+		"anexo": "./assets/certs/lgpd.pdf",
+		"preview": "./assets/certs/lgpd.png",
+		"titulo": "PRIVACIDADE E PROTEÇÃO DE DADOS (LGPD)",
+		"emissor": "SENAI",
+		"data_emissao": "12/2022",
+		"codigo": "00015509/7161524",
+		"url": "https://www.sp.senai.br/consulta-certificado?qrcode=00015509/7161524"
+	},
+	{
+		"tipo": "curso",
 		"anexo": "./assets/certs/introcomp.pdf",
 		"preview": "./assets/certs/introcomp.png",
 		"titulo": "INTROCOMP - INTRODUÇÃO À COMPUTAÇÃO",
