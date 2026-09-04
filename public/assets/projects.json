@@ -18,21 +18,6 @@
     }
   },
   {
-    "titulo": "Simulador do ENEM",
-    "descricao": "Sistema desenvolvido para auxiliar o aluno a simular descontos com base na nota do ENEM, contando com integração ao RD Station para captação de leads.",
-    "imagem": "./assets/projects/simulador_enem.png",
-    "badges": [
-      "https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white"
-    ],
-    "contribuidores": [
-      "vinicgobbi",
-      "nascimentodavi"
-    ],
-    "links": {
-      "website": "https://simuladorenem.faesa.br"
-    }
-  },
-  {
     "titulo": "Instrumentos Avaliativos",
     "descricao": "Sistema para gerenciar notas e acompanhar o desempenho dos alunos de medicina da FAESA. Desenvolvido com uma API robusta em Laravel e interface dinâmica em React.",
     "imagem": "./assets/projects/instrumentos_avaliativos.png",
@@ -49,16 +34,29 @@
     "links": {}
   },
   {
-    "titulo": "Sistema de Agendamentos Psicologia",
-    "descricao": "Solução para gestão de agendamentos e otimização do controle de horários para a clínica de Psicologia da FAESA.",
-    "imagem": "./assets/projects/agendamento_psicologia.png",
+    "titulo": "Simulador do ENEM",
+    "descricao": "Sistema desenvolvido para auxiliar o aluno a simular descontos com base na nota do ENEM, contando com integração ao RD Station para captação de leads.",
+    "imagem": "./assets/projects/simulador_enem.png",
     "badges": [
-      "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white",
-      "https://img.shields.io/badge/sql%20server-%23CC2927.svg?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"
+      "https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white"
     ],
     "contribuidores": [
       "vinicgobbi",
       "nascimentodavi"
+    ],
+    "links": {
+      "website": "https://simuladorenem.faesa.br"
+    }
+  },
+  {
+    "titulo": "Single Sign-On (SSO) AVA FAESA",
+    "descricao": "Sistema focado em simplificar o acesso dos alunos ao Ambiente Virtual de Aprendizagem (AVA) da FAESA, integrado à infraestrutura D2L através do protocolo SAML.",
+    "imagem": "./assets/projects/ssoava.png",
+    "badges": [
+      "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
     ],
     "links": {}
   },
@@ -78,14 +76,16 @@
     "links": {}
   },
   {
-    "titulo": "Single Sign-On (SSO) AVA FAESA",
-    "descricao": "Sistema focado em simplificar o acesso dos alunos ao Ambiente Virtual de Aprendizagem (AVA) da FAESA, integrado à infraestrutura D2L através do protocolo SAML.",
-    "imagem": "./assets/projects/ssoava.png",
+    "titulo": "Sistema de Agendamentos Psicologia",
+    "descricao": "Solução para gestão de agendamentos e otimização do controle de horários para a clínica de Psicologia da FAESA.",
+    "imagem": "./assets/projects/agendamento_psicologia.png",
     "badges": [
-      "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white"
+      "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white",
+      "https://img.shields.io/badge/sql%20server-%23CC2927.svg?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"
     ],
     "contribuidores": [
-      "vinicgobbi"
+      "vinicgobbi",
+      "nascimentodavi"
     ],
     "links": {}
   },
@@ -116,6 +116,149 @@
     "links": {
       "github": "https://github.com/vinicgobbi/vinicgobbi.github.io",
       "website": "https://vinicgobbi.dev.br"
+    }
+  },
+  {
+    "titulo": "Links",
+    "descricao": "Página de links pessoal reescrita utilizando o Framework Angular.",
+    "imagem": "./assets/projects/links.png",
+    "badges": [
+      "https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white",
+      "https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white",
+      "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
+      "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/links"
+    }
+  },
+  {
+    "titulo": "Blog",
+    "descricao": "Meu blog pessoal, onde escrevo sobre tecnologia e desenvolvimento.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/blog",
+    "badges": [
+      "https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/blog",
+      "website": "https://blog.vinicgobbi.dev.br"
+    }
+  },
+  {
+    "titulo": "Vini Bot",
+    "descricao": "Bot para Discord desenvolvido como projeto de trabalho da faculdade.",
+    "imagem": "./assets/projects/vini-bot.png",
+    "badges": [
+      "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+      "https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/vini-bot"
+    }
+  },
+  {
+    "titulo": "Nautilus CopyPath",
+    "descricao": "Extensão para o gerenciador de arquivos do GNOME (Nautilus) que adiciona um menu de contexto para copiar o caminho de um arquivo automaticamente.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/nautilus_copypath",
+    "badges": [
+      "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+      "https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/GNOME-4A86CF?style=for-the-badge&logo=gnome&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/nautilus_copypath"
+    }
+  },
+  {
+    "titulo": "Nautilus OpenInVSCode",
+    "descricao": "Extensão para o gerenciador de arquivos do GNOME (Nautilus) que adiciona um menu de contexto para abrir a pasta atual no VSCode.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/nautilus_openinvscode",
+    "badges": [
+      "https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+      "https://img.shields.io/badge/GNOME-4A86CF?style=for-the-badge&logo=gnome&logoColor=white",
+      "https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/nautilus_openinvscode"
+    }
+  },
+  {
+    "titulo": "Dotfiles",
+    "descricao": "Meus arquivos de configuração pessoais para ambiente de desenvolvimento em Linux.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/Dotfiles",
+    "badges": [
+      "https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+      "https://img.shields.io/badge/powershell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white",
+      "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/Dotfiles"
+    }
+  },
+  {
+    "titulo": "Post Install",
+    "descricao": "Script customizado para pós-instalação de distribuições Linux, automatizando configurações e instalação de pacotes.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/post_install",
+    "badges": [
+      "https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/post_install"
+    }
+  },
+  {
+    "titulo": "Post Windows",
+    "descricao": "Script customizado para pós-instalação do Windows, equivalente ao script de pós-instalação Linux.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/post_windows",
+    "badges": [
+      "https://img.shields.io/badge/powershell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white",
+      "https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/post_windows"
+    }
+  },
+  {
+    "titulo": "Arduino Projects",
+    "descricao": "Repositório com pequenos projetos desenvolvidos para Arduino.",
+    "imagem": "https://opengraph.githubassets.com/1/vinicgobbi/Arduino-Projects",
+    "badges": [
+      "https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white",
+      "https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
+    ],
+    "contribuidores": [
+      "vinicgobbi"
+    ],
+    "links": {
+      "github": "https://github.com/vinicgobbi/Arduino-Projects"
     }
   }
 ]

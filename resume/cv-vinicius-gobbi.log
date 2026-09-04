@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.8.8)  8 AUG 2026 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.4)  4 SEP 2026 09:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,7 +386,10 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-No file cv-vinicius-gobbi.aux.
+(./cv-vinicius-gobbi.aux
+Package babel Info: 'brazilian' activates 'portuges' shorthands.
+(babel)             Reported on input line 8.
+)
 \openout1 = `cv-vinicius-gobbi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
@@ -407,8 +410,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
-Package babel Info: 'brazilian' activates 'portuges' shorthands.
-(babel)             Reported on input line 73.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -458,12 +460,14 @@ Package babel Info: 'brazilian' activates 'portuges' shorthands.
 \everyMPtoPDFconversion=\toks27
 )
 Package hyperref Info: Link coloring OFF on input line 73.
+ (./cv-vinicius-gobbi.out) (./cv-vinicius-gobbi.out)
 \@outlinefile=\write3
 \openout3 = `cv-vinicius-gobbi.out'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
 0.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
@@ -492,30 +496,23 @@ n input line 86.
 dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/
 texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}] [2] (./cv-vinicius-gobbi.a
-ux)
+f-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}] [2] [3] (./cv-vinicius-gob
+bi.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `cv-vinicius-gobbi.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cv-vinicius-gobbi.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `cv-vinicius-gobbi.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14851 strings out of 469494
- 255314 string characters out of 5469292
- 680565 words of memory out of 5000000
- 43337 multiletter control sequences out of 15000+600000
+ 14860 strings out of 469494
+ 255520 string characters out of 5469292
+ 680636 words of memory out of 5000000
+ 43339 multiletter control sequences out of 15000+600000
  677105 words of font info for 68 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 75i,11n,79p,321b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,321b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Br
 ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 /FontAwesome5Free-Solid.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb>
@@ -523,10 +520,10 @@ ands-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5
 1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb>
-Output written on cv-vinicius-gobbi.pdf (2 pages, 242354 bytes).
+Output written on cv-vinicius-gobbi.pdf (3 pages, 246083 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
