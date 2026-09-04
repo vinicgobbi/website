@@ -63,11 +63,15 @@ pnpm test
 
 ## Currículo
 
-O CV em PDF disponibilizado no site é gerado a partir do `.tex` em [`resume/cv-vinicius-gobbi.tex`](resume/cv-vinicius-gobbi.tex). Para recompilar localmente (Ubuntu):
+O CV em PDF disponibilizado no site é gerado a partir do `.tex` em [`resume/cv-vinicius-gobbi.tex`](resume/cv-vinicius-gobbi.tex).
+
+Sempre que esse arquivo é alterado na `main`, o workflow [`compile-resume.yml`](.github/workflows/compile-resume.yml) compila o LaTeX automaticamente e faz commit do PDF atualizado em `resume/cv-vinicius-gobbi.pdf` e `public/assets/cv-vinicius-gobbi.pdf` — não é necessário compilar manualmente após um push.
+
+O deploy do site roda no Netlify a cada push na `main`. Para evitar que ele publique com o PDF ainda desatualizado (antes da Action terminar de compilar), o [`netlify.toml`](netlify.toml) faz o Netlify pular o build quando o único arquivo alterado no commit for o `.tex` do currículo — o build "de verdade" acontece no push seguinte, feito pela própria Action já com o PDF novo.
+
+Para compilar localmente (Ubuntu), por exemplo para conferir o resultado antes de commitar:
 
 ```bash
 sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-lang-portuguese
 cd resume && pdflatex cv-vinicius-gobbi.tex
 ```
-
-Depois de gerar, copie o PDF atualizado para `public/assets/cv-vinicius-gobbi.pdf`.

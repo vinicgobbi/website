@@ -1,0 +1,5 @@
+[build]
+  # Pula o build quando o único arquivo alterado for o .tex do currículo.
+  # O workflow compile-resume.yml recompila o PDF e commita o resultado
+  # num segundo push, que aí sim dispara o build normal do site.
+  ignore = "git diff --quiet HEAD^ HEAD -- . ':!resume/cv-vinicius-gobbi.tex'"

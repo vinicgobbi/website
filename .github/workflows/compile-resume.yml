@@ -1,0 +1,38 @@
+name: Compile Resume PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "resume/cv-vinicius-gobbi.tex"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-vinicius-gobbi.tex
+          working_directory: resume
+
+      - name: Copy PDF to Angular public assets
+        run: cp resume/cv-vinicius-gobbi.pdf public/assets/cv-vinicius-gobbi.pdf
+
+      - name: Commit compiled PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: recompilar currículo em PDF"
+          file_pattern: >-
+            resume/cv-vinicius-gobbi.pdf
+            resume/cv-vinicius-gobbi.aux
+            resume/cv-vinicius-gobbi.log
+            resume/cv-vinicius-gobbi.out
+            public/assets/cv-vinicius-gobbi.pdf
