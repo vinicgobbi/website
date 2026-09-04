@@ -1,59 +1,73 @@
-# Portfolio
+# Portfólio — Vinícius Cavati Gobbi
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+Meu site de portfólio pessoal, desenvolvido em Angular. Reúne apresentação, experiência, stacks, certificações e os projetos em que trabalhei (institucionais e pessoais).
 
-## Development server
+🔗 [vinicgobbi.dev.br](https://vinicgobbi.dev.br)
 
-To start a local development server, run:
+## Stack
 
-```bash
-ng serve
+- [Angular](https://angular.dev/) (standalone components + SSR)
+- Bootstrap 5 / ng-bootstrap
+- SCSS
+- TypeScript
+
+## Estrutura
+
+```
+src/app/components/   # seções da página (home, about, experience, stacks, projects, contact, ...)
+src/app/services/     # serviços (ex.: leitura de projects.json)
+src/app/shared/       # interfaces e utilitários compartilhados
+public/assets/        # imagens, ícones e o projects.json com os dados dos projetos
+resume/               # currículo em LaTeX (cv-vinicius-gobbi.tex) usado para gerar o PDF exposto no site
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Os projetos exibidos na seção "Meus Projetos" são carregados de [`public/assets/projects.json`](public/assets/projects.json) — para adicionar ou editar um projeto, basta alterar esse arquivo (segue a interface em [`src/app/shared/interfaces/project.ts`](src/app/shared/interfaces/project.ts)).
 
-## Code scaffolding
+## Desenvolvimento
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Instalar dependências:
 
 ```bash
-ng generate --help
+pnpm install
 ```
 
-## Building
-
-To build the project run:
+Subir o servidor local:
 
 ```bash
-ng build
+pnpm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Acesse `http://localhost:4200/`. A aplicação recarrega automaticamente ao salvar alterações.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Build
 
 ```bash
-ng test
+pnpm run build
 ```
 
-## Running end-to-end tests
+Os artefatos de build vão para `dist/docs` (configurado em `angular.json` para publicação via GitHub Pages).
 
-For end-to-end (e2e) testing, run:
+## Deploy
+
+O deploy é feito com [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages):
 
 ```bash
-ng e2e
+ng deploy
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Testes
 
-## Additional Resources
+```bash
+pnpm test
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Currículo
+
+O CV em PDF disponibilizado no site é gerado a partir do `.tex` em [`resume/cv-vinicius-gobbi.tex`](resume/cv-vinicius-gobbi.tex). Para recompilar localmente (Ubuntu):
+
+```bash
+sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-lang-portuguese
+cd resume && pdflatex cv-vinicius-gobbi.tex
+```
+
+Depois de gerar, copie o PDF atualizado para `public/assets/cv-vinicius-gobbi.pdf`.
