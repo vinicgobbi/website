@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
     titulo: 'Amigo Indica',
     descricao:
       'Sistema que gerencia o programa de indicações da FAESA, facilitando a captação de novos alunos através de recomendações.',
-    imagem: 'assets/projects/amigo_indica.png',
+    imagem: 'assets/projects/amigo_indica.webp',
     categoria: 'profissional',
     tecnologias: ['Laravel', 'React', 'TypeScript', 'SQL Server'],
     contribuidores: ['vinicgobbi', 'nascimentodavi'],
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     titulo: 'Simulador do ENEM',
     descricao:
       'Simulador de descontos com base na nota do ENEM, integrado ao RD Station para captação de leads.',
-    imagem: 'assets/projects/simulador_enem.png',
+    imagem: 'assets/projects/simulador_enem.webp',
     categoria: 'profissional',
     tecnologias: ['Symfony', 'PHP', 'RD Station'],
     contribuidores: ['vinicgobbi', 'nascimentodavi'],
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     titulo: 'Single Sign-On (SSO) AVA FAESA',
     descricao:
       'Simplifica o acesso dos alunos ao Ambiente Virtual de Aprendizagem, integrado à infraestrutura D2L via protocolo SAML.',
-    imagem: 'assets/projects/ssoava.png',
+    imagem: 'assets/projects/ssoava.webp',
     categoria: 'profissional',
     tecnologias: ['Laravel', 'SAML', 'D2L'],
     contribuidores: ['vinicgobbi'],
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
     titulo: 'Notificações Automatizadas — FAESA APP',
     descricao:
       'Stored Procedures em SQL Server que automatizam o envio de notificações de faltas, notas e pendências financeiras.',
-    imagem: 'assets/projects/notificacoes.png',
+    imagem: 'assets/projects/notificacoes.webp',
     categoria: 'profissional',
     tecnologias: ['SQL Server', 'T-SQL'],
     contribuidores: ['vinicgobbi', 'nascimentodavi'],
