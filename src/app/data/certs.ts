@@ -4,7 +4,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'certificação',
     anexo: 'assets/certs/mtcna.pdf',
-    preview: 'assets/certs/mtcna.png',
+    preview: 'assets/certs/mtcna.webp',
     titulo: 'MikroTik Certified Network Associate (MTCNA)',
     emissor: 'MikroTik',
     data_emissao: '05/2026',
@@ -15,7 +15,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'curso',
     anexo: 'assets/certs/curso_mtcre.pdf',
-    preview: 'assets/certs/curso_mtcre.png',
+    preview: 'assets/certs/curso_mtcre.webp',
     titulo: 'Curso Oficial MikroTik MTCRE',
     emissor: 'OPENTECH',
     data_emissao: '05/2026',
@@ -23,7 +23,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'curso',
     anexo: 'assets/certs/lgpd.pdf',
-    preview: 'assets/certs/lgpd.png',
+    preview: 'assets/certs/lgpd.webp',
     titulo: 'Privacidade e Proteção de Dados (LGPD)',
     emissor: 'SENAI',
     data_emissao: '12/2022',
@@ -33,7 +33,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'curso',
     anexo: 'assets/certs/introcomp.pdf',
-    preview: 'assets/certs/introcomp.png',
+    preview: 'assets/certs/introcomp.webp',
     titulo: 'INTROCOMP — Introdução à Computação',
     emissor: 'UFES',
     data_emissao: '10/2021',
@@ -43,7 +43,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'curso',
     anexo: 'assets/certs/mecmaqind.pdf',
-    preview: 'assets/certs/mecmaqind.png',
+    preview: 'assets/certs/mecmaqind.webp',
     titulo: 'Mecânico de Máquinas Industriais',
     emissor: 'SENAI',
     data_emissao: '06/2024',
@@ -51,7 +51,7 @@ export const CERTS: Cert[] = [
   {
     tipo: 'curso',
     anexo: 'assets/certs/dataschool.pdf',
-    preview: 'assets/certs/dataschool.png',
+    preview: 'assets/certs/dataschool.webp',
     titulo: 'Informática',
     emissor: 'Dat@School',
     data_emissao: '06/2017',
