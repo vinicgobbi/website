@@ -14,6 +14,14 @@ export const CERTS: Cert[] = [
   },
   {
     tipo: 'curso',
+    anexo: 'assets/certs/curso_mtcre.pdf',
+    preview: 'assets/certs/curso_mtcre.png',
+    titulo: 'Curso Oficial MikroTik MTCRE',
+    emissor: 'OPENTECH',
+    data_emissao: '05/2026',
+  },
+  {
+    tipo: 'curso',
     anexo: 'assets/certs/lgpd.pdf',
     preview: 'assets/certs/lgpd.png',
     titulo: 'Privacidade e Proteção de Dados (LGPD)',
