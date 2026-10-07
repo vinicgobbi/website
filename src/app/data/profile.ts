@@ -8,7 +8,7 @@ export const PROFILE: Profile = {
     'Desenvolvo sistemas web com Laravel, React e Angular — da modelagem do banco de dados à interface. Gosto de soluções que funcionam de verdade, com código limpo e interfaces intuitivas.',
   disponivel: true,
   localizacao: 'Cariacica, ES — Brasil',
-  email: 'vinicius.cgobbi2004@gmail.com',
+  email: 'vinicgobbi@gmail.com',
   linkedin: 'https://linkedin.com/in/vinicgobbi',
   github: 'https://github.com/vinicgobbi',
   cv: 'assets/cv-vinicius-gobbi.pdf',
