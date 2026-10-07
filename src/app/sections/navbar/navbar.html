@@ -1,0 +1,64 @@
+<header class="navbar" [class.navbar--scrolled]="scrolled() || menuOpen()">
+  <nav class="container navbar__inner" aria-label="Navegação principal">
+    <a class="brand" href="#inicio" (click)="closeMenu()" aria-label="Ir para o início">
+      <span class="brand__mark" aria-hidden="true">VG</span>
+      <span class="brand__name">{{ profile.nomeCurto }}</span>
+    </a>
+
+    <ul id="nav-menu" class="nav-links" [class.nav-links--open]="menuOpen()">
+      @for (link of links; track link.id) {
+        <li>
+          <a
+            class="nav-link"
+            [href]="'#' + link.id"
+            [class.active]="activeSection() === link.id"
+            [attr.aria-current]="activeSection() === link.id ? 'location' : null"
+            (click)="closeMenu()"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+      <li class="nav-links__cv">
+        <a class="btn btn-primary" [href]="profile.cv" download="cv-vinicius-gobbi.pdf">
+          <i class="bi bi-download" aria-hidden="true"></i> Baixar currículo
+        </a>
+      </li>
+    </ul>
+
+    <div class="navbar__actions">
+      <a
+        class="btn btn-primary btn-sm navbar__cv"
+        [href]="profile.cv"
+        download="cv-vinicius-gobbi.pdf"
+      >
+        <i class="bi bi-download" aria-hidden="true"></i> Currículo
+      </a>
+
+      <button
+        type="button"
+        class="btn btn-ghost btn-sm btn-icon"
+        (click)="theme.toggle()"
+        [attr.aria-label]="theme.theme() === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'"
+        [title]="theme.theme() === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'"
+      >
+        <i
+          class="bi"
+          [class.bi-sun]="theme.theme() === 'dark'"
+          [class.bi-moon-stars]="theme.theme() === 'light'"
+          aria-hidden="true"
+        ></i>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-ghost btn-sm btn-icon navbar__toggle"
+        (click)="toggleMenu()"
+        aria-controls="nav-menu"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
+      >
+        <i class="bi" [class.bi-list]="!menuOpen()" [class.bi-x-lg]="menuOpen()" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+</header>

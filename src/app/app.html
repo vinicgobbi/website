@@ -1,2 +1,24 @@
-<app-home></app-home>
-<router-outlet />
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<app-navbar />
+<main id="conteudo">
+  <app-hero />
+  <app-about />
+  <app-experience />
+  <app-projects />
+  <app-skills />
+  <app-education />
+  <app-contact />
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© {{ year }} {{ nome }}</p>
+    <nav aria-label="Rodapé">
+      <ul class="footer__links">
+        @for (link of links; track link.id) {
+          <li><a [href]="'#' + link.id">{{ link.label }}</a></li>
+        }
+        <li><a href="#inicio">Voltar ao topo <i class="bi bi-arrow-up" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>

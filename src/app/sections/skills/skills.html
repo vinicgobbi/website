@@ -1,0 +1,37 @@
+<section id="habilidades" class="section" aria-labelledby="habilidades-title">
+  <div class="container" appRevealOnScroll>
+    <header class="section-header">
+      <span class="eyebrow">Habilidades</span>
+      <h2 id="habilidades-title" class="section-title">Tecnologias que uso no dia a dia</h2>
+    </header>
+
+    <div class="groups">
+      @for (group of groups; track group.titulo) {
+        <article class="card group">
+          <h3 class="group__title">
+            <i class="bi {{ group.icone }}" aria-hidden="true"></i> {{ group.titulo }}
+          </h3>
+          <ul class="group__list">
+            @for (item of group.itens; track item.nome) {
+              <li class="skill">
+                @if (item.icone.startsWith('bi-')) {
+                  <i class="bi {{ item.icone }}" aria-hidden="true"></i>
+                } @else {
+                  <img
+                    [src]="'assets/icons/' + item.icone + '.svg'"
+                    [class.mono]="item.mono"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                }
+                {{ item.nome }}
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>

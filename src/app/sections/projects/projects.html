@@ -1,0 +1,110 @@
+<section id="projetos" class="section section--alt" aria-labelledby="projetos-title">
+  <div class="container" appRevealOnScroll>
+    <header class="section-header">
+      <span class="eyebrow">Portfólio</span>
+      <h2 id="projetos-title" class="section-title">Projetos</h2>
+      <p class="section-subtitle">
+        Sistemas que desenvolvi na FAESA e projetos pessoais e open-source.
+      </p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filtrar projetos">
+      @for (f of filters; track f.id) {
+        <button
+          type="button"
+          class="filter"
+          [class.filter--active]="filter() === f.id"
+          [attr.aria-pressed]="filter() === f.id"
+          (click)="setFilter(f.id)"
+        >
+          {{ f.label }} <span class="filter__count">{{ f.total }}</span>
+        </button>
+      }
+    </div>
+
+    <ul class="grid" aria-live="polite">
+      @for (projeto of visible(); track projeto.titulo) {
+        <li class="card project">
+          <div class="project__media">
+            <img [src]="projeto.imagem" alt="" loading="lazy" width="640" height="320" />
+            <span class="project__tag" [class.project__tag--pro]="projeto.categoria === 'profissional'">
+              {{ projeto.categoria === 'profissional' ? 'Profissional' : 'Pessoal' }}
+            </span>
+          </div>
+
+          <div class="project__body">
+            <h3 class="project__title">{{ projeto.titulo }}</h3>
+            <p class="project__desc">{{ projeto.descricao }}</p>
+
+            <ul class="chips" aria-label="Tecnologias">
+              @for (tec of projeto.tecnologias; track tec) {
+                <li class="chip">{{ tec }}</li>
+              }
+            </ul>
+
+            <div class="project__footer">
+              @if (projeto.contribuidores.length > 1) {
+                <div class="team" [title]="'Equipe: ' + projeto.contribuidores.join(', ')">
+                  <span class="team__avatars">
+                    @for (dev of projeto.contribuidores; track dev) {
+                      <a [href]="'https://github.com/' + dev" target="_blank" rel="noopener">
+                        <img
+                          [src]="'https://github.com/' + dev + '.png?size=64'"
+                          [alt]="dev"
+                          width="28"
+                          height="28"
+                          loading="lazy"
+                        />
+                      </a>
+                    }
+                  </span>
+                  <span>Em equipe</span>
+                </div>
+              } @else {
+                <span class="team"><i class="bi bi-person" aria-hidden="true"></i> Individual</span>
+              }
+
+              <div class="project__links">
+                @if (projeto.links.website) {
+                  <a
+                    class="btn btn-sm btn-primary"
+                    [href]="projeto.links.website"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Acessar
+                    <span class="visually-hidden">{{ projeto.titulo }}</span>
+                  </a>
+                }
+                @if (projeto.links.github) {
+                  <a
+                    class="btn btn-sm btn-outline"
+                    [href]="projeto.links.github"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="bi bi-github" aria-hidden="true"></i> Código
+                    <span class="visually-hidden">de {{ projeto.titulo }}</span>
+                  </a>
+                }
+                @if (!projeto.links.website && !projeto.links.github) {
+                  <span class="project__private" title="Sistema interno, sem acesso público">
+                    <i class="bi bi-lock" aria-hidden="true"></i> Uso interno
+                  </span>
+                }
+              </div>
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+
+    @if (hiddenCount() > 0) {
+      <div class="more">
+        <button type="button" class="btn btn-outline" (click)="expanded.set(true)">
+          Ver mais {{ hiddenCount() }} projetos <i class="bi bi-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+    }
+  </div>
+</section>

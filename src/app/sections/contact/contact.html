@@ -1,0 +1,44 @@
+<section id="contato" class="section" aria-labelledby="contato-title">
+  <div class="container" appRevealOnScroll>
+    <div class="card contact">
+      <span class="eyebrow">Contato</span>
+      <h2 id="contato-title" class="section-title">Vamos conversar?</h2>
+      <p class="contact__text">
+        Estou aberto a novas oportunidades e sempre disposto a trocar ideias sobre tecnologia.
+        Respondo por e-mail ou LinkedIn.
+      </p>
+
+      <div class="email">
+        <a class="email__link" [href]="'mailto:' + profile.email">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <span>{{ profile.email }}</span>
+        </a>
+        <button
+          type="button"
+          class="btn btn-sm btn-ghost"
+          (click)="copyEmail()"
+          [attr.aria-label]="emailCopied() ? 'E-mail copiado' : 'Copiar e-mail'"
+        >
+          <i class="bi" [class.bi-copy]="!emailCopied()" [class.bi-check-lg]="emailCopied()" aria-hidden="true"></i>
+          <span aria-live="polite">{{ emailCopied() ? 'Copiado!' : 'Copiar' }}</span>
+        </button>
+      </div>
+
+      <div class="contact__ctas">
+        <a class="btn btn-primary" [href]="'mailto:' + profile.email">
+          <i class="bi bi-send" aria-hidden="true"></i> Enviar e-mail
+        </a>
+        <a class="btn btn-outline" [href]="profile.linkedin" target="_blank" rel="noopener">
+          <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a class="btn btn-outline" [href]="profile.github" target="_blank" rel="noopener">
+          <i class="bi bi-github" aria-hidden="true"></i> GitHub
+        </a>
+        <a class="btn btn-outline" [href]="profile.cv" download="cv-vinicius-gobbi.pdf">
+          <i class="bi bi-download" aria-hidden="true"></i> Currículo (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

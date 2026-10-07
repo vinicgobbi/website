@@ -1,0 +1,26 @@
+<section id="sobre" class="section section--alt" aria-labelledby="sobre-title">
+  <div class="container about" appRevealOnScroll>
+    <div class="about__text">
+      <span class="eyebrow">Sobre mim</span>
+      <h2 id="sobre-title" class="section-title">Quem sou eu</h2>
+      @for (paragraph of paragraphs; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+
+    <aside class="card about__facts" aria-labelledby="facts-title">
+      <h3 id="facts-title" class="about__facts-title">Em resumo</h3>
+      <dl>
+        @for (fact of facts; track fact.rotulo) {
+          <div class="fact">
+            <i class="bi {{ fact.icone }}" aria-hidden="true"></i>
+            <div>
+              <dt>{{ fact.rotulo }}</dt>
+              <dd>{{ fact.valor }}</dd>
+            </div>
+          </div>
+        }
+      </dl>
+    </aside>
+  </div>
+</section>

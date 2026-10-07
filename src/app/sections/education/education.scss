@@ -1,0 +1,133 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.degree {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+
+  > i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+  }
+}
+
+.certs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  list-style: none;
+}
+
+.cert {
+  display: flex;
+  gap: 1.1rem;
+  padding: 1rem;
+}
+
+.cert__thumb {
+  flex-shrink: 0;
+
+  img {
+    width: 96px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 520px) {
+    display: none;
+  }
+}
+
+.cert__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+
+.cert__title {
+  font-size: 1rem;
+}
+
+.cert__meta {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cert__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.code {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  min-height: 36px;
+  padding: 0.3rem 0.7rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-subtle);
+  font: 0.8rem ui-monospace, SFMono-Regular, Menlo, monospace;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent-text);
+  }
+}
+
+.code__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 18ch;
+}

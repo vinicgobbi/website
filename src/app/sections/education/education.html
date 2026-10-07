@@ -1,0 +1,89 @@
+<section id="formacao" class="section section--alt" aria-labelledby="formacao-title">
+  <div class="container" appRevealOnScroll>
+    <header class="section-header">
+      <span class="eyebrow">Formação</span>
+      <h2 id="formacao-title" class="section-title">Formação e certificações</h2>
+    </header>
+
+    <div class="layout">
+      <div>
+        <h3 class="subheading">Graduação</h3>
+        @for (edu of education; track edu.curso) {
+          <article class="card degree">
+            <i class="bi bi-mortarboard" aria-hidden="true"></i>
+            <div>
+              <h4>{{ edu.curso }}</h4>
+              <p>{{ edu.instituicao }} · {{ edu.periodo }}</p>
+            </div>
+          </article>
+        }
+      </div>
+
+      <div>
+        <h3 class="subheading">Certificações e cursos</h3>
+        <ul class="certs">
+          @for (cert of certs; track cert.titulo) {
+            <li class="card cert">
+              <a
+                class="cert__thumb"
+                [href]="cert.anexo"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img [src]="cert.preview" alt="" loading="lazy" width="96" height="68" />
+              </a>
+
+              <div class="cert__info">
+                <div class="cert__title-row">
+                  <h4 class="cert__title">{{ cert.titulo }}</h4>
+                  <span class="chip" [class.chip--neutral]="cert.tipo === 'curso'">
+                    {{ cert.tipo === 'certificação' ? 'Certificação' : 'Curso' }}
+                  </span>
+                </div>
+                <p class="cert__meta">
+                  {{ cert.emissor }} · {{ cert.data_emissao }}
+                  @if (cert.data_vencimento) {
+                    · válido até {{ cert.data_vencimento }}
+                  }
+                </p>
+
+                <div class="cert__actions">
+                  <a class="btn btn-sm btn-outline" [href]="cert.anexo" target="_blank" rel="noopener">
+                    <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Ver certificado
+                    <span class="visually-hidden">{{ cert.titulo }}</span>
+                  </a>
+                  @if (cert.url) {
+                    <a class="btn btn-sm btn-ghost" [href]="cert.url" target="_blank" rel="noopener">
+                      <i class="bi bi-patch-check" aria-hidden="true"></i> Validar
+                    </a>
+                  }
+                  @if (cert.codigo; as codigo) {
+                    <button
+                      type="button"
+                      class="code"
+                      (click)="copyCode(codigo)"
+                      [title]="'Copiar código de validação: ' + codigo"
+                    >
+                      <span class="code__value">{{ codigo }}</span>
+                      <i
+                        class="bi"
+                        [class.bi-copy]="copiedCode() !== codigo"
+                        [class.bi-check-lg]="copiedCode() === codigo"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="visually-hidden" aria-live="polite">
+                        {{ copiedCode() === codigo ? 'Código copiado' : 'Copiar código' }}
+                      </span>
+                    </button>
+                  }
+                </div>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

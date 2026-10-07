@@ -1,0 +1,48 @@
+<section id="experiencia" class="section" aria-labelledby="experiencia-title">
+  <div class="container" appRevealOnScroll>
+    <header class="section-header">
+      <span class="eyebrow">Trajetória</span>
+      <h2 id="experiencia-title" class="section-title">Experiência profissional</h2>
+    </header>
+
+    <ol class="timeline">
+      @for (xp of items; track xp.empresa) {
+        <li class="timeline__item" [class.timeline__item--current]="!xp.fim">
+          <article class="card job">
+            <header class="job__header">
+              <div>
+                <h3 class="job__role">{{ xp.cargo }}</h3>
+                <p class="job__company">
+                  @if (xp.site) {
+                    <a [href]="xp.site" target="_blank" rel="noopener">{{ xp.empresa }}</a>
+                  } @else {
+                    {{ xp.empresa }}
+                  }
+                </p>
+              </div>
+              <p class="job__period">
+                @if (!xp.fim) {
+                  <span class="chip">Atual</span>
+                }
+                <span>{{ xp.periodo }}</span>
+                <span class="job__duration">· {{ xp.duracao }}</span>
+              </p>
+            </header>
+
+            <ul class="job__tasks">
+              @for (atividade of xp.atividades; track $index) {
+                <li>{{ atividade }}</li>
+              }
+            </ul>
+
+            <ul class="chips" aria-label="Tecnologias e ferramentas">
+              @for (tec of xp.tecnologias; track tec) {
+                <li class="chip chip--neutral">{{ tec }}</li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

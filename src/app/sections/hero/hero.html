@@ -1,0 +1,53 @@
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      @if (profile.disponivel) {
+        <p class="hero__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Aberto a novas oportunidades
+        </p>
+      }
+
+      <h1 id="hero-title" class="hero__title">
+        Olá, eu sou o <span class="hero__name">{{ profile.nome }}</span>
+      </h1>
+      <p class="hero__role">{{ profile.cargo }} · Laravel, React &amp; Angular</p>
+      <p class="hero__summary">{{ profile.resumo }}</p>
+
+      <div class="hero__ctas">
+        <a class="btn btn-primary" [href]="profile.cv" download="cv-vinicius-gobbi.pdf">
+          <i class="bi bi-download" aria-hidden="true"></i> Baixar currículo (PDF)
+        </a>
+        <a class="btn btn-outline" href="#contato">
+          <i class="bi bi-chat-dots" aria-hidden="true"></i> Entrar em contato
+        </a>
+      </div>
+
+      <ul class="hero__meta">
+        <li>
+          <i class="bi bi-geo-alt" aria-hidden="true"></i> {{ profile.localizacao }}
+        </li>
+        <li>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a [href]="profile.github" target="_blank" rel="noopener">
+            <i class="bi bi-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__photo">
+      <img
+        ngSrc="assets/profile.png"
+        width="150"
+        height="150"
+        priority
+        [alt]="'Foto de ' + profile.nome"
+      />
+    </div>
+  </div>
+</section>
