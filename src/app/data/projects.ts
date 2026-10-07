@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     categoria: 'pessoal',
     tecnologias: ['Bash', 'PowerShell', 'Linux', 'Windows'],
     contribuidores: ['vinicgobbi'],
-    links: { github: 'https://github.com/vinicgobbi/post-install' },
+    links: { github: 'https://github.com/vinicgobbi/dots-omarchy' },
   },
   {
     titulo: 'Extensões para o Nautilus',
