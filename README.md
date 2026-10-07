@@ -47,15 +47,11 @@ Acesse `http://localhost:4200/`. A aplicação recarrega automaticamente ao salv
 pnpm run build
 ```
 
-Os artefatos de build vão para `dist/docs` (configurado em `angular.json` para publicação via GitHub Pages).
+Os artefatos de build vão para `dist/docs/browser`.
 
 ## Deploy
 
-O deploy é feito com [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages):
-
-```bash
-ng deploy
-```
+O site é publicado pela [Netlify](https://www.netlify.com/) a cada push na `main` (ver [`netlify.toml`](netlify.toml)).
 
 ## Testes
 
