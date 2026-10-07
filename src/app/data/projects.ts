@@ -1,0 +1,178 @@
+import { Project } from './models';
+
+export const PROJECTS: Project[] = [
+  {
+    titulo: 'Amigo Indica',
+    descricao:
+      'Sistema que gerencia o programa de indicações da FAESA, facilitando a captação de novos alunos através de recomendações.',
+    imagem: 'assets/projects/amigo_indica.png',
+    categoria: 'profissional',
+    tecnologias: ['Laravel', 'React', 'TypeScript', 'SQL Server'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi'],
+    destaque: true,
+    links: { website: 'https://amigoindica.faesa.br' },
+  },
+  {
+    titulo: 'Instrumentos Avaliativos',
+    descricao:
+      'Sistema para gerenciar notas e acompanhar o desempenho dos alunos de Medicina da FAESA, com API em Laravel e interface dinâmica em React.',
+    imagem: 'assets/projects/instrumentos_avaliativos.png',
+    categoria: 'profissional',
+    tecnologias: ['Laravel', 'React', 'TypeScript', 'SQL Server'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi'],
+    destaque: true,
+    links: {},
+  },
+  {
+    titulo: 'Simulador do ENEM',
+    descricao:
+      'Simulador de descontos com base na nota do ENEM, integrado ao RD Station para captação de leads.',
+    imagem: 'assets/projects/simulador_enem.png',
+    categoria: 'profissional',
+    tecnologias: ['Symfony', 'PHP', 'RD Station'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi'],
+    destaque: true,
+    links: { website: 'https://simuladorenem.faesa.br' },
+  },
+  {
+    titulo: 'Single Sign-On (SSO) AVA FAESA',
+    descricao:
+      'Simplifica o acesso dos alunos ao Ambiente Virtual de Aprendizagem, integrado à infraestrutura D2L via protocolo SAML.',
+    imagem: 'assets/projects/ssoava.png',
+    categoria: 'profissional',
+    tecnologias: ['Laravel', 'SAML', 'D2L'],
+    contribuidores: ['vinicgobbi'],
+    links: {},
+  },
+  {
+    titulo: 'Agendamentos — Odontologia',
+    descricao:
+      'Gestão de agendamentos e otimização do controle de horários da clínica de Odontologia da FAESA.',
+    imagem: 'assets/projects/agendamento_odontologia.png',
+    categoria: 'profissional',
+    tecnologias: ['Laravel', 'SQL Server'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi', 'guilhermebrancocod'],
+    links: {},
+  },
+  {
+    titulo: 'Agendamentos — Psicologia',
+    descricao:
+      'Gestão de agendamentos e otimização do controle de horários da clínica de Psicologia da FAESA.',
+    imagem: 'assets/projects/agendamento_psicologia.png',
+    categoria: 'profissional',
+    tecnologias: ['Laravel', 'SQL Server'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi'],
+    links: {},
+  },
+  {
+    titulo: 'Notificações Automatizadas — FAESA APP',
+    descricao:
+      'Stored Procedures em SQL Server que automatizam o envio de notificações de faltas, notas e pendências financeiras.',
+    imagem: 'assets/projects/notificacoes.png',
+    categoria: 'profissional',
+    tecnologias: ['SQL Server', 'T-SQL'],
+    contribuidores: ['vinicgobbi', 'nascimentodavi'],
+    links: {},
+  },
+  {
+    titulo: 'Portfólio Pessoal',
+    descricao:
+      'Este site: meu cartão de visitas digital, feito em Angular com SSR para apresentar minha trajetória e projetos.',
+    imagem: 'assets/projects/portfolio_pessoal.png',
+    categoria: 'pessoal',
+    tecnologias: ['Angular', 'TypeScript', 'SCSS'],
+    contribuidores: ['vinicgobbi'],
+    destaque: true,
+    links: {
+      github: 'https://github.com/vinicgobbi/vinicgobbi.github.io',
+      website: 'https://vinicgobbi.dev.br',
+    },
+  },
+  {
+    titulo: 'Blog',
+    descricao: 'Meu blog pessoal, onde escrevo sobre tecnologia e desenvolvimento.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/blog',
+    categoria: 'pessoal',
+    tecnologias: ['Ruby', 'Bash'],
+    contribuidores: ['vinicgobbi'],
+    links: {
+      github: 'https://github.com/vinicgobbi/blog',
+      website: 'https://blog.vinicgobbi.dev.br',
+    },
+  },
+  {
+    titulo: 'Links',
+    descricao: 'Página de links pessoal reescrita com Angular.',
+    imagem: 'assets/projects/links.png',
+    categoria: 'pessoal',
+    tecnologias: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/links' },
+  },
+  {
+    titulo: 'Vini Bot',
+    descricao: 'Bot para Discord desenvolvido como trabalho da faculdade.',
+    imagem: 'assets/projects/vini-bot.png',
+    categoria: 'pessoal',
+    tecnologias: ['Python', 'Discord'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/vini-bot' },
+  },
+  {
+    titulo: 'Nautilus CopyPath',
+    descricao:
+      'Extensão para o Nautilus (GNOME) que adiciona ao menu de contexto a opção de copiar o caminho de um arquivo.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/nautilus_copypath',
+    categoria: 'pessoal',
+    tecnologias: ['Python', 'Bash', 'GNOME'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/nautilus_copypath' },
+  },
+  {
+    titulo: 'Nautilus OpenInVSCode',
+    descricao:
+      'Extensão para o Nautilus (GNOME) que adiciona ao menu de contexto a opção de abrir a pasta atual no VS Code.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/nautilus_openinvscode',
+    categoria: 'pessoal',
+    tecnologias: ['Python', 'Bash', 'GNOME', 'VS Code'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/nautilus_openinvscode' },
+  },
+  {
+    titulo: 'Dotfiles',
+    descricao: 'Meus arquivos de configuração para ambiente de desenvolvimento em Linux.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/Dotfiles',
+    categoria: 'pessoal',
+    tecnologias: ['Bash', 'Python', 'PowerShell', 'Linux'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/Dotfiles' },
+  },
+  {
+    titulo: 'Post Install',
+    descricao:
+      'Script de pós-instalação para distribuições Linux, automatizando configurações e instalação de pacotes.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/post_install',
+    categoria: 'pessoal',
+    tecnologias: ['Bash', 'Linux'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/post_install' },
+  },
+  {
+    titulo: 'Post Windows',
+    descricao: 'Script de pós-instalação para Windows, equivalente ao Post Install do Linux.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/post_windows',
+    categoria: 'pessoal',
+    tecnologias: ['PowerShell', 'Windows'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/post_windows' },
+  },
+  {
+    titulo: 'Arduino Projects',
+    descricao: 'Coleção de pequenos projetos desenvolvidos para Arduino.',
+    imagem: 'https://opengraph.githubassets.com/1/vinicgobbi/Arduino-Projects',
+    categoria: 'pessoal',
+    tecnologias: ['C++', 'Arduino'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/Arduino-Projects' },
+  },
+];
