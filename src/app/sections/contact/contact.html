@@ -5,7 +5,7 @@
       <h2 id="contato-title" class="section-title">Vamos conversar?</h2>
       <p class="contact__text">
         Estou aberto a novas oportunidades e sempre disposto a trocar ideias sobre tecnologia.
-        Respondo por e-mail ou LinkedIn.
+        Respondo por e-mail, WhatsApp ou LinkedIn.
       </p>
 
       <div class="email">
@@ -27,6 +27,9 @@
       <div class="contact__ctas">
         <a class="btn btn-primary" [href]="'mailto:' + profile.email">
           <i class="bi bi-send" aria-hidden="true"></i> Enviar e-mail
+        </a>
+        <a class="btn btn-outline" [href]="profile.whatsapp" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
         </a>
         <a class="btn btn-outline" [href]="profile.linkedin" target="_blank" rel="noopener">
           <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn

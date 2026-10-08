@@ -5,6 +5,7 @@ export interface Profile {
   resumo: string;
   localizacao: string;
   email: string;
+  whatsapp: string;
   linkedin: string;
   github: string;
   cv: string;
