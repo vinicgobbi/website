@@ -3,7 +3,6 @@ export interface Profile {
   nomeCurto: string;
   cargo: string;
   resumo: string;
-  disponivel: boolean;
   localizacao: string;
   email: string;
   linkedin: string;

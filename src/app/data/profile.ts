@@ -6,7 +6,6 @@ export const PROFILE: Profile = {
   cargo: 'Desenvolvedor Full-Stack',
   resumo:
     'Desenvolvo sistemas web com Laravel, React e Angular — da modelagem do banco de dados à interface. Gosto de soluções que funcionam de verdade, com código limpo e interfaces intuitivas.',
-  disponivel: true,
   localizacao: 'Cariacica, ES — Brasil',
   email: 'vinicgobbi@gmail.com',
   linkedin: 'https://linkedin.com/in/vinicgobbi',

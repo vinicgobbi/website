@@ -31,8 +31,6 @@
   --accent-contrast: #ffffff;
   --accent-soft: rgba(13, 148, 136, 0.1);
   --accent-text: #0f766e;
-  --success: #15803d;
-  --success-soft: rgba(22, 163, 74, 0.12);
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06);
   --shadow-hover: 0 2px 4px rgba(15, 23, 42, 0.06), 0 16px 40px rgba(15, 23, 42, 0.1);
   --nav-bg: rgba(248, 250, 252, 0.8);
@@ -52,8 +50,6 @@
   --accent-contrast: #04201d;
   --accent-soft: rgba(20, 184, 166, 0.14);
   --accent-text: #5eead4;
-  --success: #4ade80;
-  --success-soft: rgba(74, 222, 128, 0.12);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
   --nav-bg: rgba(11, 15, 20, 0.75);
@@ -293,15 +289,6 @@ a {
 .chip--neutral {
   background: var(--surface-2);
   color: var(--text-muted);
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 0 4px var(--success-soft);
-  flex-shrink: 0;
 }
 
 /* ---------- Reveal-on-scroll sutil (ver RevealOnScroll directive) ---------- */
