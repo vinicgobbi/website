@@ -1,0 +1,55 @@
+# Gerado por deploy-dev v0.6.0 (deploy-dev init). Pode editar à
+# vontade; rode "deploy-dev check" para validar contra as convenções.
+name: Release and deploy
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  APP_NAME: website
+
+jobs:
+  release-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+        with:
+          version: 10
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "24"
+
+      - name: Install Node dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: |
+          set -euo pipefail
+          pnpm build
+
+      - name: Package release
+        run: tar -czf "$RUNNER_TEMP/release.tar.gz" -C dist/docs/browser .
+
+      # Gera o release id (timestamp + sufixo), monta a chave num diretório
+      # temporário e envia o tarball ao deploy-ci do servidor.
+      - name: Deploy
+        uses: vinicgobbi/deploy-tools@1e48ae0e1d80fa6da754dc6aa4e2a9b6d5f64910 # v0.6.0
+        with:
+          app: ${{ env.APP_NAME }}
+          archive: ${{ runner.temp }}/release.tar.gz
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          ssh-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          host-key: ${{ secrets.DEPLOY_HOST_KEY }}
