@@ -1,0 +1,17 @@
+import { ChangeDetectionStrategy, Component, afterNextRender, inject } from '@angular/core';
+import { AnalyticsService } from '../../services/analytics';
+
+@Component({
+  selector: 'app-cookie-banner',
+  templateUrl: './cookie-banner.html',
+  styleUrl: './cookie-banner.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class CookieBanner {
+  protected readonly analytics = inject(AnalyticsService);
+
+  constructor() {
+    // Só no navegador: no prerender não há escolha salva e o banner não vai para o HTML.
+    afterNextRender(() => this.analytics.init());
+  }
+}

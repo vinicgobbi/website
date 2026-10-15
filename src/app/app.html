@@ -17,8 +17,12 @@
         @for (link of links; track link.id) {
           <li><a [href]="'#' + link.id">{{ link.label }}</a></li>
         }
+        <li>
+          <button type="button" class="footer__button" (click)="analytics.openPreferences()">Cookies</button>
+        </li>
         <li><a href="#inicio">Voltar ao topo <i class="bi bi-arrow-up" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
   </div>
 </footer>
+<app-cookie-banner />
