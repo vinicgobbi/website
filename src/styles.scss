@@ -55,6 +55,23 @@
   --nav-bg: rgba(11, 15, 20, 0.75);
 }
 
+/* Só em 31/10: acento laranja de abóbora (ver shared/halloween). */
+:root[data-halloween] {
+  --accent: #c2410c;
+  --accent-hover: #9a3412;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(234, 88, 12, 0.12);
+  --accent-text: #c2410c;
+}
+
+:root[data-halloween][data-theme='dark'] {
+  --accent: #f97316;
+  --accent-hover: #fb923c;
+  --accent-contrast: #1c0a00;
+  --accent-soft: rgba(249, 115, 22, 0.16);
+  --accent-text: #fdba74;
+}
+
 /* ---------- Base ---------- */
 *,
 *::before,
