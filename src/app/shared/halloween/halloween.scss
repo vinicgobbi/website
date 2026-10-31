@@ -71,31 +71,47 @@
   100% { translate: var(--dx) var(--dy); scale: 1; opacity: 0; }
 }
 
-/* Aranha descendo e subindo pelo fio no canto da tela. */
+/*
+ * Aranha descendo e subindo pelo fio, que fica preso no topo da tela, no meio da margem
+ * lateral (fora do conteúdo e do logo). Sem margem livre, ela não aparece.
+ */
 .spider {
+  --min: calc(var(--nav-height) + 30px);
+  --max: calc(var(--nav-height) + 150px);
   position: absolute;
-  top: var(--nav-height);
-  left: 12%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: dangle 6s ease-in-out infinite;
+  top: 0;
+  left: calc((100% - var(--container)) / 4);
+}
+
+@media (max-width: 1279px) {
+  .spider {
+    display: none;
+  }
 }
 
 .spider__thread {
+  position: absolute;
+  top: 0;
+  left: -0.5px;
   width: 1px;
-  height: 120px;
+  height: var(--min);
   background: var(--text-subtle);
+  animation: thread 6s ease-in-out infinite;
 }
 
+/* Presa na ponta do fio: uma animação só move os dois juntos. */
 .spider__body {
+  position: absolute;
+  top: 100%;
+  left: 50%;
   font-size: 1.5rem;
   line-height: 1;
+  translate: -50% -0.35rem;
 }
 
-@keyframes dangle {
-  0%, 100% { translate: 0 -90px; }
-  50% { translate: 0 0; }
+@keyframes thread {
+  0%, 100% { height: var(--min); }
+  50% { height: var(--max); }
 }
 
 .greeting {
