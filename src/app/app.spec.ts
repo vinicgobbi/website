@@ -21,7 +21,7 @@ describe('App', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     for (const { id } of NAV_LINKS) {
-      expect(compiled.querySelector(`#${id}`)).withContext(id).not.toBeNull();
+      expect(compiled.querySelector(`#${id}`), id).not.toBeNull();
     }
   });
 });
