@@ -65,35 +65,48 @@ export const PROJECTS: Project[] = [
     links: {},
   },
   {
-    titulo: 'Plugins para Omarchy',
+    titulo: 'Resultados das Eleições',
     descricao:
-      'Widgets open-source para a barra do Omarchy (Arch + Hyprland): Now Bar, gerenciador de clipboard, VPN, mídia, bateria, energia e conexões remotas — além do tema Lunar Quest.',
-    imagem: 'assets/projects/omarchy_plugins.webp',
+      'Apuração das eleições brasileiras em tempo real com os dados oficiais do TSE: de presidente a vereador, do país inteiro até cada um dos 5.570 municípios, com mapa, notificações e tema escuro.',
+    imagem: 'assets/projects/resultado_eleicoes.webp',
     categoria: 'pessoal',
-    tecnologias: ['QML', 'Python', 'Linux', 'Wayland'],
+    tecnologias: ['Laravel', 'React', 'Inertia.js', 'Tailwind CSS'],
     contribuidores: ['vinicgobbi'],
     destaque: true,
-    links: { github: 'https://github.com/vinicgobbi?tab=repositories&q=omarchy' },
+    links: {
+      github: 'https://github.com/vinicgobbi/resultado',
+      website: 'https://resultado.vinicgobbi.dev.br',
+    },
   },
   {
     titulo: 'Automação de Ambiente',
     descricao:
-      'Scripts de pós-instalação para Linux e Windows e dotfiles versionados, que automatizam a configuração de uma máquina nova para desenvolvimento.',
+      'Pós-instalação para Ubuntu e Windows com interface interativa no terminal (TUI): escolha o que instalar e configurar, de Docker, VS Code e PHP + SQL Server a temas, extensões e dotfiles, numa máquina nova pronta para desenvolver.',
     imagem: 'assets/projects/automacao_ambiente.webp',
     categoria: 'pessoal',
-    tecnologias: ['Bash', 'PowerShell', 'Linux', 'Windows'],
+    tecnologias: ['Go', 'Bubble Tea', 'Linux', 'Windows'],
     contribuidores: ['vinicgobbi'],
-    links: { github: 'https://github.com/vinicgobbi/dots-omarchy' },
+    links: { github: 'https://github.com/vinicgobbi/post-install' },
+  },
+  {
+    titulo: 'Deploy Tools',
+    descricao:
+      'Deploy por releases com symlink para apps servidos pelo Apache: build no GitHub Actions, envio por SSH a um usuário dedicado, rollback instantâneo e uma CLI de tela cheia para operar o servidor.',
+    imagem: 'assets/projects/deploy_tools.webp',
+    categoria: 'pessoal',
+    tecnologias: ['Go', 'GitHub Actions', 'SSH', 'Apache'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/deploy-tools' },
   },
   {
     titulo: 'Extensões para o Nautilus',
     descricao:
-      'Extensões para o gerenciador de arquivos do GNOME que adicionam ao menu de contexto: copiar caminho, abrir no VS Code e abrir no terminal.',
+      'Extensões para o gerenciador de arquivos do GNOME que adicionam ao menu de contexto: copiar o caminho e abrir no VS Code.',
     imagem: 'assets/projects/nautilus_extensoes.webp',
     categoria: 'pessoal',
     tecnologias: ['Python', 'Bash', 'GNOME'],
     contribuidores: ['vinicgobbi'],
-    links: { github: 'https://github.com/vinicgobbi?tab=repositories&q=nautilus' },
+    links: { github: 'https://github.com/vinicgobbi/nautilus-copypath' },
   },
   {
     titulo: 'Portfólio Pessoal',
