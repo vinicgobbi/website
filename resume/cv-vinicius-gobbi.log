@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  8 OCT 2026 01:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  31 OCT 2026 20:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -535,10 +535,10 @@ b></opt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/texlive
 ist/fonts/type1/public/lm/lmr9.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/
 public/lm/lmri10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmri
 9.pfb>
-Output written on cv-vinicius-gobbi.pdf (2 pages, 249655 bytes).
+Output written on cv-vinicius-gobbi.pdf (2 pages, 250621 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
