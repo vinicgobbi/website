@@ -1,0 +1,107 @@
+/* Abaixo do padding do rodapé (1.75rem): espiando, ele não cobre nenhum link. */
+$peek: 1.625rem;
+$cycle: 30s;
+$first-peek: 5s;
+
+.tux {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 0;
+  z-index: 45;
+  width: 64px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  translate: 0 calc(100% - #{$peek});
+  animation: peek $cycle ease-in-out $first-peek infinite backwards;
+}
+
+.tux__body {
+  display: block;
+  overflow: visible;
+  transition: translate 0.25s ease;
+}
+
+@media (hover: hover) {
+  .tux:hover {
+    animation-play-state: paused;
+  }
+
+  .tux:hover .tux__body {
+    translate: 0 calc(-100% + #{$peek});
+  }
+
+  .tux:hover .flipper--wave {
+    animation: wave 0.5s ease-in-out infinite alternate;
+  }
+}
+
+/* Com o teclado ele aparece mesmo se o foco chegar enquanto estiver escondido. */
+.tux:focus-visible {
+  animation: none;
+}
+
+.tux:focus-visible .tux__body {
+  translate: 0 calc(-100% + #{$peek});
+}
+
+.fur,
+.flipper {
+  fill: #14161b;
+  stroke: rgba(255, 255, 255, 0.28);
+  stroke-width: 1;
+}
+
+.eye {
+  fill: #fbf9f1;
+}
+
+.beak,
+.foot {
+  fill: #f7b21a;
+}
+
+.beak--lower {
+  fill: #dd8a0b;
+}
+
+.pupils {
+  fill: #0b0f14;
+  animation: look $cycle ease-in-out $first-peek infinite backwards;
+}
+
+.eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 5s linear infinite;
+}
+
+.flipper--wave {
+  transform-box: fill-box;
+  transform-origin: top left;
+}
+
+/* Sai só por um instante de cada ciclo: o resto do tempo fica fora da tela. */
+@keyframes peek {
+  0% { translate: 0 100%; }
+  3%, 17% { translate: 0 calc(100% - #{$peek}); }
+  20%, 100% { translate: 0 100%; }
+}
+
+@keyframes look {
+  0%, 6% { translate: 0 0; }
+  8%, 11% { translate: -2px 0; }
+  13%, 15% { translate: 2px 0; }
+  17%, 100% { translate: 0 0; }
+}
+
+@keyframes blink {
+  0%, 94%, 100% { scale: 1 1; }
+  97% { scale: 1 0.1; }
+}
+
+@keyframes wave {
+  from { rotate: -10deg; }
+  to { rotate: -55deg; }
+}

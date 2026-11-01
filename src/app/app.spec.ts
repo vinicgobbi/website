@@ -24,4 +24,14 @@ describe('App', () => {
       expect(compiled.querySelector(`#${id}`), id).not.toBeNull();
     }
   });
+
+  it('abre o terminal ao clicar no Tux', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.window')).toBeNull();
+    compiled.querySelector<HTMLButtonElement>('.tux')!.click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('.window')).not.toBeNull();
+  });
 });
