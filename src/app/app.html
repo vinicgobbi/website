@@ -20,6 +20,9 @@
         <li>
           <button type="button" class="footer__button" (click)="analytics.openPreferences()">Cookies</button>
         </li>
+        <li>
+          <button type="button" class="footer__button footer__button--mono" (click)="terminal.open()" aria-label="Abrir terminal" title="Abrir terminal">$_</button>
+        </li>
         <li><a href="#inicio">Voltar ao topo <i class="bi bi-arrow-up" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
@@ -27,3 +30,4 @@
 </footer>
 <app-cookie-banner />
 <app-halloween />
+<app-terminal #terminal />

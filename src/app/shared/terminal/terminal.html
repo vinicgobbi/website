@@ -1,0 +1,52 @@
+@if (opened()) {
+  <div class="backdrop" (click)="closeOnBackdrop($event)">
+    <div class="window" role="dialog" aria-modal="true" aria-label="Terminal" (click)="focusPrompt()">
+      <header class="titlebar">
+        <span class="titlebar__title">visitante&#64;vinicgobbi: ~</span>
+        <button type="button" class="titlebar__close" (click)="close()" aria-label="Fechar terminal" title="Fechar (Esc)">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div #screen class="screen">
+        <div aria-live="polite">
+          @for (entry of entries(); track entry.id) {
+            @if (entry.command !== undefined) {
+              <p class="line"><span class="ps1">visitante&#64;vinicgobbi:~$</span> {{ entry.command }}</p>
+            }
+            @if (entry.output.length) {
+              <pre class="output" [class.output--art]="entry.art">{{ entry.output.join('\n') }}</pre>
+            }
+          }
+        </div>
+        <form class="line line--prompt" (submit)="submit($event, prompt)">
+          <label class="ps1" for="terminal-prompt">visitante&#64;vinicgobbi:~$</label>
+          <input
+            #prompt
+            id="terminal-prompt"
+            class="prompt"
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            enterkeyhint="send"
+            (keydown)="onPromptKeydown($event, prompt)"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+}
+
+@if (panic()) {
+  <div class="panic" role="alert">
+    <pre>[    0.000000] rm: removendo /home/visitante...
+[    0.000420] rm: removendo /usr/bin...
+[    0.001337] rm: removendo /boot/vmlinuz...
+[    0.002048] rm: removendo /sbin/init...
+Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000009
+---[ end Kernel panic - not syncing: Attempted to kill init! ]---
+
+Brincadeira, nada foi apagado. Reiniciando...<span class="cursor" aria-hidden="true">_</span></pre>
+  </div>
+}
