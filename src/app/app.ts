@@ -9,6 +9,7 @@ import { Education } from './sections/education/education';
 import { Contact } from './sections/contact/contact';
 import { CookieBanner } from './shared/cookie-banner/cookie-banner';
 import { Halloween } from './shared/halloween/halloween';
+import { Natal } from './shared/natal/natal';
 import { Terminal } from './shared/terminal/terminal';
 import { Tux } from './shared/tux/tux';
 import { PROFILE } from './data/profile';
@@ -16,7 +17,7 @@ import { AnalyticsService } from './services/analytics';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Halloween, Terminal, Tux],
+  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Halloween, Natal, Terminal, Tux],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
