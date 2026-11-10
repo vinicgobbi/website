@@ -146,6 +146,12 @@ a {
   text-underline-offset: 3px;
 }
 
+/* Botão do VLibras (shadow root): herda estas variáveis, então segue o acento do site. */
+:root {
+  --vlibras-btn-focus-visible-outline: 2px solid var(--accent);
+  --vlibras-btn-focus-visible-shadow: none;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
