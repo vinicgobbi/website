@@ -79,14 +79,34 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    titulo: 'RemoteMan',
+    descricao:
+      'Gerenciador de conexões RDP e SSH para Windows: servidores organizados por grupo, status online/offline, conexão rápida com Ctrl+K e importação de arquivos .rdp, ssh config e PuTTY, com as senhas guardadas no Gerenciador de Credenciais do Windows.',
+    imagem: 'assets/projects/remoteman.webp',
+    categoria: 'pessoal',
+    tecnologias: ['C#', 'WinUI 3', '.NET', 'Windows'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/RemoteMan' },
+  },
+  {
+    titulo: 'Plugins para Omarchy',
+    descricao:
+      'Widgets open-source para a barra do Omarchy (Arch + Hyprland), publicados no catálogo oficial: Now Bar, clipboard, VPN, mídia, bateria, energia, workspaces e conexões remotas. A Now Bar também ganhou uma versão para o GNOME, a Now Pill.',
+    imagem: 'assets/projects/omarchy_plugins.webp',
+    categoria: 'pessoal',
+    tecnologias: ['QML', 'JavaScript', 'Linux', 'Wayland'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi?tab=repositories&q=omarchy-plugin' },
+  },
+  {
     titulo: 'Automação de Ambiente',
     descricao:
-      'Pós-instalação para Ubuntu e Windows com interface interativa no terminal (TUI): escolha o que instalar e configurar, de Docker, VS Code e PHP + SQL Server a temas, extensões e dotfiles, numa máquina nova pronta para desenvolver.',
+      'Pós-instalação com interface interativa no terminal (TUI) para Ubuntu e Fedora, Windows e Omarchy (Arch + Hyprland): escolha o que instalar e configurar, de Docker, VS Code e PHP + SQL Server a temas, extensões e dotfiles, numa máquina nova pronta para desenvolver.',
     imagem: 'assets/projects/automacao_ambiente.webp',
     categoria: 'pessoal',
     tecnologias: ['Go', 'Bubble Tea', 'Linux', 'Windows'],
     contribuidores: ['vinicgobbi'],
-    links: { github: 'https://github.com/vinicgobbi/post-install' },
+    links: { github: 'https://github.com/vinicgobbi?tab=repositories&q=post' },
   },
   {
     titulo: 'Deploy Tools',
@@ -99,14 +119,60 @@ export const PROJECTS: Project[] = [
     links: { github: 'https://github.com/vinicgobbi/deploy-tools' },
   },
   {
+    titulo: 'spotdown',
+    descricao:
+      'Baixa faixas, álbuns e playlists do Spotify por uma TUI, sem login: busca o áudio no YouTube Music e gera arquivos com tags completas, capa, letra sincronizada (LRCLIB) e playlist M3U.',
+    imagem: 'assets/projects/spotdown.webp',
+    categoria: 'pessoal',
+    tecnologias: ['Go', 'Bubble Tea', 'yt-dlp', 'FFmpeg'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/spotdown' },
+  },
+  {
+    titulo: 'git-sync',
+    descricao:
+      'Gerencia push mirrors de repositórios Gitea/Forgejo para GitHub, Gitea ou Forgejo por uma TUI: cria o repositório no destino, configura o espelhamento na origem e acompanha o status de cada envio.',
+    imagem: 'assets/projects/git_sync.webp',
+    categoria: 'pessoal',
+    tecnologias: ['Go', 'Bubble Tea', 'Gitea', 'GitHub API'],
+    contribuidores: ['vinicgobbi'],
+    links: { github: 'https://github.com/vinicgobbi/git-sync' },
+  },
+  {
     titulo: 'Extensões para o Nautilus',
     descricao:
-      'Extensões para o gerenciador de arquivos do GNOME que adicionam ao menu de contexto: copiar o caminho e abrir no VS Code.',
+      'Extensões para o gerenciador de arquivos do GNOME que adicionam ao menu de contexto: copiar o caminho, abrir no VS Code e abrir no terminal padrão do Omarchy.',
     imagem: 'assets/projects/nautilus_extensoes.webp',
     categoria: 'pessoal',
     tecnologias: ['Python', 'Bash', 'GNOME'],
     contribuidores: ['vinicgobbi'],
-    links: { github: 'https://github.com/vinicgobbi/nautilus-copypath' },
+    links: { github: 'https://github.com/vinicgobbi?tab=repositories&q=nautilus' },
+  },
+  {
+    titulo: 'Página de Links',
+    descricao:
+      'Minha página de links: portfólio, LinkedIn, GitHub, currículo e redes sociais em um só lugar, com atalhos curtos gerados no build, QR code e versão em Markdown servida por edge function.',
+    imagem: 'assets/projects/links.webp',
+    categoria: 'pessoal',
+    tecnologias: ['Angular', 'TypeScript', 'Netlify'],
+    contribuidores: ['vinicgobbi'],
+    links: {
+      github: 'https://github.com/vinicgobbi/links',
+      website: 'https://links.vinicgobbi.dev.br',
+    },
+  },
+  {
+    titulo: 'Vini Blog',
+    descricao:
+      'Blog pessoal sobre tecnologia, Linux, redes e servidores, com séries de posts como "Apache: do zero ao servidor em produção".',
+    imagem: 'assets/projects/blog.webp',
+    categoria: 'pessoal',
+    tecnologias: ['Jekyll', 'Chirpy', 'Markdown'],
+    contribuidores: ['vinicgobbi'],
+    links: {
+      github: 'https://github.com/vinicgobbi/blog',
+      website: 'https://blog.vinicgobbi.dev.br',
+    },
   },
   {
     titulo: 'Portfólio Pessoal',
