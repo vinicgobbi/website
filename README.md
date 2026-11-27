@@ -7,7 +7,7 @@ Meu site de portfólio pessoal, desenvolvido em Angular. Reúne apresentação, 
 ## Stack
 
 - [Angular](https://angular.dev/) (standalone components + SSR)
-- SCSS próprio (sem framework de UI), com tema claro/escuro
+- [@vinicgobbi/ui](https://github.com/vinicgobbi/vinicgobbi-ui): minha identidade visual (tokens, tema claro/escuro, fontes, aviso de cookies, VLibras e decorações de datas comemorativas), compartilhada com a [página de links](https://github.com/vinicgobbi/links) e o blog
 - TypeScript
 
 ## Estrutura
@@ -26,6 +26,18 @@ Todo o conteúdo fica em [`src/app/data/`](src/app/data/), tipado pelas interfac
 Ícones de tecnologias são SVGs em `public/assets/icons/`, copiados de [devicon](https://devicon.dev/) — para uma nova habilidade, adicione o SVG ali e referencie pelo nome em [`skills.ts`](src/app/data/skills.ts).
 
 ## Desenvolvimento
+
+O `@vinicgobbi/ui` vem do GitHub Packages, que exige token até para pacotes públicos. O pnpm 12 não lê credenciais do `.npmrc` do repositório, então o token fica na configuração do usuário. Uma vez só, no `~/.npmrc`:
+
+```ini
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+E, antes do `pnpm install`, um token com o escopo `read:packages` (o do `gh` serve, depois de `gh auth refresh -s read:packages`):
+
+```bash
+export NODE_AUTH_TOKEN=$(gh auth token)
+```
 
 Instalar dependências:
 
