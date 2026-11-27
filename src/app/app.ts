@@ -12,11 +12,11 @@ import { Tux } from './shared/tux/tux';
 import { PROFILE } from './data/profile';
 import { Vlibras } from '@vinicgobbi/ui/a11y';
 import { AnalyticsService, CookieBanner } from '@vinicgobbi/ui/consent';
-import { Halloween, Natal } from '@vinicgobbi/ui/seasonal';
+import { Seasonal } from '@vinicgobbi/ui/seasonal';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Halloween, Natal, Terminal, Tux, Vlibras],
+  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Seasonal, Terminal, Tux, Vlibras],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

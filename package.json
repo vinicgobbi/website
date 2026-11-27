@@ -32,7 +32,7 @@
     "@angular/platform-server": "^22.2.6",
     "@angular/router": "^22.2.6",
     "@angular/ssr": "^22.2.6",
-    "@vinicgobbi/ui": "^0.2.0",
+    "@vinicgobbi/ui": "^0.4.0",
     "rxjs": "~7.8.2",
     "tslib": "^2.9.1",
     "zone.js": "~0.15.1"
