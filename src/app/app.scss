@@ -38,6 +38,27 @@
   cursor: pointer;
 }
 
-.footer__button--mono {
-  font-family: ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+/* Único rastro do terminal: um cursor discreto piscando após o copyright. */
+.footer__cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.3em;
+  padding: 0;
+  border: 0;
+  vertical-align: text-bottom;
+  background: currentColor;
+  opacity: 0.35;
+  cursor: text;
+  animation: footer-cursor-blink 1.1s step-end infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes footer-cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }

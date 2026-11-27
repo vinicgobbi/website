@@ -29,12 +29,12 @@ describe('App', () => {
     }
   });
 
-  it('abre o terminal ao clicar no Tux', () => {
+  it('abre o terminal ao clicar no cursor do rodapé', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.window')).toBeNull();
-    compiled.querySelector<HTMLButtonElement>('.tux')!.click();
+    compiled.querySelector<HTMLButtonElement>('.footer__cursor')!.click();
     fixture.detectChanges();
     expect(compiled.querySelector('.window')).not.toBeNull();
   });

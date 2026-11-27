@@ -8,7 +8,6 @@ import { Skills } from './sections/skills/skills';
 import { Education } from './sections/education/education';
 import { Contact } from './sections/contact/contact';
 import { Terminal } from './shared/terminal/terminal';
-import { Tux } from './shared/tux/tux';
 import { PROFILE } from './data/profile';
 import { Vlibras } from '@vinicgobbi/ui/a11y';
 import { AnalyticsService, CookieBanner } from '@vinicgobbi/ui/consent';
@@ -16,7 +15,7 @@ import { Seasonal } from '@vinicgobbi/ui/seasonal';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Seasonal, Terminal, Tux, Vlibras],
+  imports: [Navbar, Hero, About, Experience, Projects, Skills, Education, Contact, CookieBanner, Seasonal, Terminal, Vlibras],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
