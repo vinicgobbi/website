@@ -29,8 +29,10 @@
   </div>
 </footer>
 <vg-cookie-banner purpose="ver quais seções do site são mais acessadas" />
-<vg-halloween />
-<vg-natal />
+<!-- Datas comemorativas, carregadas à parte quando o navegador fica ocioso (só aparecem nas datas). -->
+@defer (on idle) {
+  <vg-seasonal />
+}
 <app-terminal #terminal />
 <app-tux (summon)="terminal.open()" />
 <vg-vlibras />
