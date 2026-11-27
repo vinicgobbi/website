@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EXPERIENCE } from '../../data/experience';
 import { formatDuration, formatMonth } from '../../shared/date-utils';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 @Component({
   selector: 'app-experience',

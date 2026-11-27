@@ -1,4 +1,7 @@
 import { TestBed } from '@angular/core/testing';
+import { provideAnalytics } from '@vinicgobbi/ui/consent';
+import { hasThemeInitScript } from '@vinicgobbi/ui/theme';
+import indexHtml from '../index.html' with { loader: 'text' };
 import { App } from './app';
 import { NAV_LINKS } from './sections/navbar/navbar';
 
@@ -6,6 +9,7 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [provideAnalytics({ measurementId: 'G-TESTE123' })],
     }).compileComponents();
   });
 
@@ -33,5 +37,9 @@ describe('App', () => {
     compiled.querySelector<HTMLButtonElement>('.tux')!.click();
     fixture.detectChanges();
     expect(compiled.querySelector('.window')).not.toBeNull();
+  });
+
+  it('o index.html traz o script anti-flash do tema da versão instalada de @vinicgobbi/ui', () => {
+    expect(hasThemeInitScript(indexHtml)).toBe(true);
   });
 });

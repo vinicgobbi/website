@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CERTS } from '../../data/certs';
 import { EDUCATION } from '../../data/profile';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 @Component({
   selector: 'app-education',

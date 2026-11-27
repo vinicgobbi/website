@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { PROJECTS } from '../../data/projects';
 import { ProjectCategory } from '../../data/models';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 type Filter = 'todos' | ProjectCategory;
 

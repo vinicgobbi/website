@@ -6,7 +6,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { ThemeService } from '../../services/theme-service';
+import { ThemeService } from '@vinicgobbi/ui/theme';
 import { PROFILE } from '../../data/profile';
 
 export const NAV_LINKS = [
