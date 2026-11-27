@@ -3,7 +3,6 @@ import {
   Component,
   DOCUMENT,
   ElementRef,
-  afterNextRender,
   afterRenderEffect,
   inject,
   signal,
@@ -26,7 +25,7 @@ const WELCOME = ['Bem-vindo ao vgsh! Digite help para ver os comandos.'];
 
 /**
  * Easter egg para quem curte Linux: digitar "sudo" em qualquer ponto da página (ou clicar no
- * $_ do rodapé, para quem está sem teclado físico) abre um terminal de brincadeira.
+ * cursor discreto do rodapé, para quem está sem teclado físico) abre um terminal de brincadeira.
  */
 @Component({
   selector: 'app-terminal',
@@ -53,9 +52,6 @@ export class Terminal {
   protected readonly entries = signal<Entry[]>(this.welcome());
 
   constructor() {
-    afterNextRender(() => {
-      console.info(`Psiu, você que abriu o DevTools: digite "${TRIGGER}" em qualquer lugar da página.`);
-    });
     afterRenderEffect(() => {
       this.prompt()?.nativeElement.focus();
     });
@@ -74,7 +70,7 @@ export class Terminal {
 
   protected close(): void {
     this.opened.set(false);
-    // Sem isto, devolver o foco ao $_ do rodapé rolaria a página até lá.
+    // Sem isto, devolver o foco ao cursor do rodapé rolaria a página até lá.
     this.opener?.focus({ preventScroll: true });
     this.opener = null;
   }

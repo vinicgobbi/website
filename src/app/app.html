@@ -11,7 +11,7 @@
 </main>
 <footer class="footer">
   <div class="container footer__inner">
-    <p>© {{ year }} {{ nome }}</p>
+    <p>© {{ year }} {{ nome }}<button type="button" class="footer__cursor" (click)="terminal.open()" aria-label="Abrir terminal"></button></p>
     <nav aria-label="Rodapé">
       <ul class="footer__links">
         @for (link of links; track link.id) {
@@ -19,9 +19,6 @@
         }
         <li>
           <button type="button" class="footer__button" (click)="analytics.openPreferences()">Cookies</button>
-        </li>
-        <li>
-          <button type="button" class="footer__button footer__button--mono" (click)="terminal.open()" aria-label="Abrir terminal" title="Abrir terminal">$_</button>
         </li>
         <li><a href="#inicio">Voltar ao topo <i class="bi bi-arrow-up" aria-hidden="true"></i></a></li>
       </ul>
@@ -34,5 +31,4 @@
   <vg-seasonal />
 }
 <app-terminal #terminal />
-<app-tux (summon)="terminal.open()" />
 <vg-vlibras />
