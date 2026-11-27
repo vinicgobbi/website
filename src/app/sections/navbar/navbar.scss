@@ -21,26 +21,7 @@
   gap: 1.5rem;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--text);
-  text-decoration: none;
-  font: 700 1rem var(--font-display);
-}
-
-.brand__mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: var(--accent-contrast);
-  font-size: 0.85rem;
-  font-weight: 800;
-}
+/* .brand e .brand__mark vêm de @vinicgobbi/ui (a marca é a mesma do blog). */
 
 .nav-links {
   display: flex;
