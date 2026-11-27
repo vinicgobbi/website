@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { PROFILE } from '../../data/profile';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 @Component({
   selector: 'app-contact',

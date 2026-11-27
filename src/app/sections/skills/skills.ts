@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SKILLS } from '../../data/skills';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 @Component({
   selector: 'app-skills',

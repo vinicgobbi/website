@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ABOUT, EDUCATION, PROFILE } from '../../data/profile';
 import { EXPERIENCE } from '../../data/experience';
-import { RevealOnScroll } from '../../shared/directives/reveal-on-scroll';
+import { RevealOnScroll } from '@vinicgobbi/ui/a11y';
 
 @Component({
   selector: 'app-about',

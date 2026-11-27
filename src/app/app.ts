@@ -7,14 +7,12 @@ import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
 import { Education } from './sections/education/education';
 import { Contact } from './sections/contact/contact';
-import { CookieBanner } from './shared/cookie-banner/cookie-banner';
-import { Halloween } from './shared/halloween/halloween';
-import { Natal } from './shared/natal/natal';
 import { Terminal } from './shared/terminal/terminal';
 import { Tux } from './shared/tux/tux';
-import { Vlibras } from './shared/vlibras/vlibras';
 import { PROFILE } from './data/profile';
-import { AnalyticsService } from './services/analytics';
+import { Vlibras } from '@vinicgobbi/ui/a11y';
+import { AnalyticsService, CookieBanner } from '@vinicgobbi/ui/consent';
+import { Halloween, Natal } from '@vinicgobbi/ui/seasonal';
 
 @Component({
   selector: 'app-root',
